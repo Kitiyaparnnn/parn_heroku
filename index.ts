@@ -33,6 +33,7 @@ app.get('/person', (req,res) => {
 
 app.post('/person', (req, res) => {
   const {name, age} = req.body as Person
+  
   const db = readDbFile()
   db.persons.push({name, age})
 
